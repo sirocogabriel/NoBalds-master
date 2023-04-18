@@ -5,22 +5,11 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 
 public class Cliente extends Pessoa {
 
-    private String NomeBarbeiroPreferido;
-
     public Cliente() {
     }
 
     public Cliente(Long id, String nome, String email, String telefone, String cpf, String nomeBarbeiroPreferido) {
         super(id, nome, email, telefone, cpf);
-        NomeBarbeiroPreferido = nomeBarbeiroPreferido;
-    }
-
-    @DynamoDBAttribute
-    public String getNomeBarbeiroPreferido() {
-        return NomeBarbeiroPreferido;
-    }
-
-    public void setNomeBarbeiroPreferido(String nomeBarbeiroPreferido) {
         NomeBarbeiroPreferido = nomeBarbeiroPreferido;
     }
 
